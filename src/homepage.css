@@ -16,6 +16,7 @@ body
     background-clip: text;
     -webkit-text-fill-color: transparent;
     left: 45%;
+    float: left;
     position: absolute;
     animation: fadeInAnimation ease 1.5s; 
     animation-iteration-count: 1; /*设置动画播放次数*/
