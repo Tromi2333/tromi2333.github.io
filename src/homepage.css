@@ -1,11 +1,38 @@
 body
 {
-    background-image: url(/pic/background.jpg) no-repeat center center;
+    background-image: url(background.jpg);
     background-size: 100%;
     background-attachment: fixed;
 }
+.tromihead
+{
+    
+    width: 64px;
+    height: 64px;
+}
 .welcome
 {
-    text-align: center;
     font-size: 90px;
+    background: linear-gradient(to right, blue, purple, pink);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    left: 45%;
+    right: 45%;
+    position: absolute;
+    animation: fadeInAnimation ease 1.5s; 
+    animation-iteration-count: 1; /*设置动画播放次数*/
+    animation-fill-mode: forwards; /*设置样式以在动画不播放时应用元素。forward是设置动画结束后，使用元素的结束属性值*/
 }
+@keyframes fadeInAnimation
+{ 
+    0%
+    { 
+        opacity: 0; /*设置不透明度*/
+        top: 30px;
+    } 
+    100%
+    { 
+        opacity: 1;
+        top: 5px;
+    } 
+} 
