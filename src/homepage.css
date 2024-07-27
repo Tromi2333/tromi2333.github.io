@@ -1,0 +1,11 @@
+body
+{
+    background-image: url(/pic/background.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+}
+.welcome
+{
+    text-align: center;
+    font-size: 90px;
+}
