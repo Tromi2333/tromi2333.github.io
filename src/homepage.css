@@ -9,6 +9,20 @@ body
     width: 64px;
     height: 64px;
 }
+.tromilandtext
+{
+    font-size: 35px;
+    background: linear-gradient(to right, blue, purple, pink);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    left: 4.5%;
+    top: 15px;
+    float: left;
+    position: absolute;
+    animation: textfadein ease 1.5s; 
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
 .welcome
 {
     font-size: 90px;
@@ -18,20 +32,32 @@ body
     left: 45%;
     float: left;
     position: absolute;
-    animation: fadeInAnimation ease 1.5s; 
+    animation: textfadein-bt ease 1.5s; 
     animation-iteration-count: 1; /*设置动画播放次数*/
     animation-fill-mode: forwards; /*设置样式以在动画不播放时应用元素。forward是设置动画结束后，使用元素的结束属性值*/
 }
-@keyframes fadeInAnimation
+
+@keyframes textfadein
 { 
     0%
     { 
         opacity: 0; /*设置不透明度*/
+    } 
+    100%
+    { 
+        opacity: 1;
+    } 
+} 
+@keyframes textfadein-bt
+{ 
+    0%
+    { 
+        opacity: 0;
         top: 30px;
     } 
     100%
     { 
         opacity: 1;
-        top: 5px;
+        top: 15px;
     } 
 } 
