@@ -4,19 +4,31 @@ body
     background-size: 100%;
     background-attachment: fixed;
 }
+.navigationbar
+{
+    position: fixed;
+    width: 100%;
+    left: 0%;
+    top: 0%;
+    animation: navigationbar ease 1.5s;
+    animation-iteration-count: 1; /*设置动画播放次数*/
+    animation-fill-mode:initial; /*设置样式以在动画不播放时应用元素。forward是设置动画结束后，使用元素的结束属性值*/
+}
 .tromihead
 {
+    opacity: 1;
     width: 64px;
     height: 64px;
 }
 .tromilandtext
 {
+    opacity: 1;
     font-size: 35px;
     background: linear-gradient(to right, blue, purple, pink);
     background-clip: text;
     -webkit-text-fill-color: transparent;
     left: 4.5%;
-    top: 15px;
+    top: 10%;
     float: left;
     position: absolute;
     animation: textfadein ease 1.5s; 
@@ -32,11 +44,44 @@ body
     left: 45%;
     float: left;
     position: absolute;
-    animation: textfadein-bt ease 1.5s; 
-    animation-iteration-count: 1; /*设置动画播放次数*/
-    animation-fill-mode: forwards; /*设置样式以在动画不播放时应用元素。forward是设置动画结束后，使用元素的结束属性值*/
+    animation: textfadein-bt ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
-
+.featurecollection
+{
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    width: 40%;
+    height: 100px;
+}
+.featurelink:hover
+{
+    color: blue;
+}
+.featurelink
+{
+    background-color: transparent;
+    border: none;
+    color: white;
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    transition: ease 500ms;
+}
+@keyframes linkbuttonhovereffect
+{
+    0%
+    {
+        color: transparent;
+    }
+    100%
+    {
+        color: blue;
+    }
+}
 @keyframes textfadein
 { 
     0%
@@ -53,11 +98,11 @@ body
     0%
     { 
         opacity: 0;
-        top: 30px;
+        top: 100px;
     } 
     100%
     { 
         opacity: 1;
-        top: 15px;
+        top: 75px;
     } 
 } 
