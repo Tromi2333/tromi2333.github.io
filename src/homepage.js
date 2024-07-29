@@ -6,8 +6,8 @@ swplinkbutton.onclick = function()
 }
 test.onclick = function download()
 {
-    var path = "../test.zip";
-    var name = "test.zip";
+    var path = "../pic/icon.ico";
+    var name = "icon.ico";
     const xhr = new XMLHttpRequest();
     xhr,open('get', path);
     xhr.responseType = 'blob';
