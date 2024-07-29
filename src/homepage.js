@@ -4,15 +4,30 @@ swplinkbutton.onclick = function()
 {
     window.open("somewebsitespage/");
 }
-test.onclick = function()
+test.onclick = function download()
 {
-    fetch(pic/icon.ico)
-      .then(response => response.blob())
-      .then(blob => {
-        const link = document.createElement('a');
-        link.href = URL.createObjectURL(blob);
-        link.download = icon.ico;
-        link.target = "_blank"; // 可选，如果希望在新窗口中下载文件，请取消注释此行
-        link.click();
-      });
+    var path = "../test.zip";
+    var name = "test.zip";
+    const xhr = new XMLHttpRequest();
+    xhr,open('get', path);
+    xhr.responseType = 'blob';
+    xhr.send();
+    xhr.onload = function()
+    {
+        if(this.status === 200 || this.status === 304)
+        {
+            const filereader = new FileReader();
+            filereader.readAsDataURL(this.response);
+            filereader.onload = function()
+            {
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = this.result;
+                a.download = name;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            };
+        }
+    };
 }
