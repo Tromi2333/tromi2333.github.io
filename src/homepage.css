@@ -1,8 +1,6 @@
 body
 {
     background-image: url(../pic/background.jpg);
-    background-size: 100%;
-    background-attachment: fixed;
 }
 .navigationbar
 {
@@ -105,4 +103,4 @@ body
         opacity: 1;
         top: 75px;
     } 
-}
+} 
