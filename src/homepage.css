@@ -1,8 +1,10 @@
 body
 {
     background-image: url(../pic/background.jpg);
+    background-size: cover;
+    overflow: hidden;
 }
-.navigationbar
+#navigationbar
 {
     position: fixed;
     width: 100%;
@@ -12,13 +14,13 @@ body
     animation-iteration-count: 1; /*设置动画播放次数*/
     animation-fill-mode:initial; /*设置样式以在动画不播放时应用元素。forward是设置动画结束后，使用元素的结束属性值*/
 }
-.tromihead
+#tromihead
 {
     opacity: 1;
     width: 64px;
     height: 64px;
 }
-.tromilandtext
+#tromilandtext
 {
     opacity: 1;
     font-size: 35px;
@@ -33,7 +35,7 @@ body
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-.welcome
+#welcometext
 {
     font-size: 90px;
     background: linear-gradient(to right, blue, purple, pink);
@@ -46,7 +48,7 @@ body
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-.featurecollection
+#featurecollection
 {
     background-color: transparent;
     position: absolute;
